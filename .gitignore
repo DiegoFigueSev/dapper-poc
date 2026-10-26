@@ -1,0 +1,47 @@
+# Build
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# SQLite
+*.db
+*.db-shm
+*.db-wal
+
+# NuGet
+*.nupkg
+packages/
+
+# Publish
+publish/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test Results
+TestResults/
+
+# Coverage
+coverage/
+coverage-report/
+
+# User Secrets
+secrets.json
+
+# Temporary files
+tmp/
+temp/
