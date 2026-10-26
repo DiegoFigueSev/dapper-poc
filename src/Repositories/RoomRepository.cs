@@ -4,14 +4,9 @@ using Microsoft.Data.Sqlite;
 
 namespace DemoDapper.src.Repositories;
 
-public class RoomRepository
+public class RoomRepository(SqliteConnection connection)
 {
-    private readonly SqliteConnection _connection;
-
-    public RoomRepository(SqliteConnection connection)
-    {
-        _connection = connection;
-    }
+    private readonly SqliteConnection _connection = connection;
 
     public IEnumerable<Room> FindAll()
     {

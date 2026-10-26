@@ -6,14 +6,9 @@ namespace DemoDapper.src.Controllers;
 
 [ApiController]
 [Route("rooms")]
-public class RoomsController : ControllerBase
+public class RoomsController(RoomRepository repository) : ControllerBase
 {
-    private readonly RoomRepository _repository;
-
-    public RoomsController(RoomRepository repository)
-    {
-        _repository = repository;
-    }
+    private readonly RoomRepository _repository = repository;
 
     [HttpGet]
     public IActionResult GetAll()
