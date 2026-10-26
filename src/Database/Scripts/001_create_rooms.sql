@@ -1,0 +1,17 @@
+CREATE TABLE IF NOT EXISTS Rooms (
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Number TEXT NOT NULL,
+    Capacity INTEGER NOT NULL
+);
+
+INSERT INTO Rooms(Number, Capacity)
+SELECT '101', 2
+WHERE NOT EXISTS (
+    SELECT 1 FROM Rooms WHERE Number = '101'
+);
+
+INSERT INTO Rooms(Number, Capacity)
+SELECT '102', 4
+WHERE NOT EXISTS (
+    SELECT 1 FROM Rooms WHERE Number = '102'
+);
